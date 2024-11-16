@@ -75,7 +75,7 @@ export default function AsistenteEmocional() {
           <div className="w-full max-w-md space-y-8">
             <div className="text-center space-y-4">
               <span className="inline-block px-4 py-1.5 bg-[#E8B4A4]/20 text-[#9A6B5D] rounded-full text-sm font-medium">
-                Natal-ia está aquí para ti
+                Sof-ia está aquí para ti
               </span>
               <h1 className="text-3xl font-bold text-[#4A3B38]">
                 Tu Asistente Emocional
