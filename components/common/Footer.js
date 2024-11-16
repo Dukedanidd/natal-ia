@@ -1,8 +1,6 @@
 import config from "@/config";
 
 const navItems = [
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
   { label: "Terms of Service", href: "/tos" },
   { label: "Privacy Policy", href: "/privacy" },
 ];
