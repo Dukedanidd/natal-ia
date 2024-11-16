@@ -11,6 +11,8 @@
 # testing
 /coverage
 
+.yarnrc.yml
+
 .next
 # next.js
 .next/
