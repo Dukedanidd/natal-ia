@@ -1,59 +1,61 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Phone, Heart, MessageCircle, Sparkles } from 'lucide-react'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import { useState } from "react";
+import { Phone, Heart, MessageCircle, Sparkles } from "lucide-react";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+import toast, { Toaster } from "react-hot-toast";
 export default function AsistenteEmocional() {
-  const [nombre, setNombre] = useState('')
-  const [telefono, setTelefono] = useState('')
-  const [estado, setEstado] = useState('')
+  const [nombre, setNombre] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [estado, setEstado] = useState("");
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      const response = await fetch('/api/bland', {
-        method: 'POST',
+      const response = await fetch("/api/bland", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           phone_number: telefono,
           name: nombre,
-          emotional_state: estado
+          emotional_state: estado,
         }),
-      })
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (data.success) {
-        toast.success('¡Llamada iniciada! Recibirás una llamada en breve.')
+        toast.success("¡Llamada iniciada! Recibirás una llamada en breve.");
       } else {
-        toast.error('Error al iniciar la llamada: ' + data.error)
+        toast.error("Error al iniciar la llamada: " + data.error);
       }
     } catch (error) {
-      console.error('Error:', error)
-      toast.error('Error al procesar la solicitud')
+      console.error("Error:", error);
+      toast.error("Error al procesar la solicitud");
     }
-  }
+  };
 
   const estadosEmocionales = [
-    { valor: 'frustrado', emoji: '😤', texto: 'Frustrado' },
-    { valor: 'triste', emoji: '😢', texto: 'Triste' },
-    { valor: 'estresado', emoji: '😰', texto: 'Estresado' },
-    { valor: 'burnout', emoji: '😵', texto: 'Burnout' },
-    { valor: 'feliz', emoji: '😊', texto: 'Feliz' },
-    { valor: 'ansioso', emoji: '😟', texto: 'Ansioso' },
-    { valor: 'enojado', emoji: '😡', texto: 'Enojado' },
-    { valor: 'sorprendido', emoji: '😲', texto: 'Sorprendido' },
-  ]
+    { valor: "frustrado", emoji: "😤", texto: "Frustrado" },
+    { valor: "triste", emoji: "😢", texto: "Triste" },
+    { valor: "estresado", emoji: "😰", texto: "Estresado" },
+    { valor: "burnout", emoji: "😵", texto: "Burnout" },
+    { valor: "feliz", emoji: "😊", texto: "Feliz" },
+    { valor: "ansioso", emoji: "😟", texto: "Ansioso" },
+    { valor: "enojado", emoji: "😡", texto: "Enojado" },
+    { valor: "sorprendido", emoji: "😲", texto: "Sorprendido" },
+  ];
 
   return (
     <>
-      <ToastContainer />
-      <section id="asistente-emocional" className="min-h-screen relative overflow-hidden bg-[#FDF8F3]">
+      <section
+        id="asistente-emocional"
+        className="min-h-screen relative overflow-hidden bg-[#FDF8F3]"
+      >
         {/* Patrón de fondo similar al Hero */}
         {/* <div className="absolute inset-0">
           <svg className="absolute w-full h-full opacity-[0.15]" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -79,13 +81,20 @@ export default function AsistenteEmocional() {
                 Tu Asistente Emocional
               </h1>
               <p className="text-[#6B5550]">
-                Un espacio seguro para compartir tus emociones y recibir el apoyo que necesitas
+                Un espacio seguro para compartir tus emociones y recibir el
+                apoyo que necesitas
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-sm p-8 space-y-6 border border-[#E8B4A4]/20">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-sm p-8 space-y-6 border border-[#E8B4A4]/20"
+            >
               <div>
-                <label htmlFor="nombre" className="block text-[#4A3B38] font-medium mb-2">
+                <label
+                  htmlFor="nombre"
+                  className="block text-[#4A3B38] font-medium mb-2"
+                >
                   Nombre
                 </label>
                 <input
@@ -99,7 +108,10 @@ export default function AsistenteEmocional() {
               </div>
 
               <div>
-                <label htmlFor="telefono" className="block text-[#4A3B38] font-medium mb-2">
+                <label
+                  htmlFor="telefono"
+                  className="block text-[#4A3B38] font-medium mb-2"
+                >
                   Teléfono
                 </label>
                 <input
@@ -113,7 +125,10 @@ export default function AsistenteEmocional() {
               </div>
 
               <div>
-                <label htmlFor="estado" className="block text-[#4A3B38] font-medium mb-2">
+                <label
+                  htmlFor="estado"
+                  className="block text-[#4A3B38] font-medium mb-2"
+                >
                   ¿Cómo te sientes?
                 </label>
                 <select
@@ -162,5 +177,5 @@ export default function AsistenteEmocional() {
         </div>
       </section>
     </>
-  )
+  );
 }

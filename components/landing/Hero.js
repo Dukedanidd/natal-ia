@@ -30,11 +30,7 @@ export default function Hero() {
             <span className="inline-block px-4 py-1.5 bg-[#E8B4A4]/20 text-[#9A6B5D] rounded-full text-sm font-medium mb-4">
               Estamos aquí para ti
             </span>
-            <img
-              src="/logo.png"
-              alt="Logo"
-              className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 h-[45vh] w-50 opacity-15 pointer-events-none"
-            />
+
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#4A3B38]">
               Tu Espacio de
               <span className="block mt-2 text-[#9A6B5D]">Escucha y Apoyo</span>
