@@ -1,3 +1,6 @@
-export default function AsistenteEmocional() {
-  return <div>Asistente Emocional</div>;
+"use client";
+
+export default function Landing() {
+  return <div>Landing</div>;
 }
+
