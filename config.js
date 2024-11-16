@@ -1,11 +1,11 @@
 const config = {
   // REQUIRED
-  appName: "Escuelita Starter",
+  appName: "Natal-ia",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Escuelita Starter is a template to start creating your own projects FAST",
+    "Natal-ia es tu asistente emocional virtual, aquí para escucharte y apoyarte en momentos difíciles.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "escuelitamaker.com",
+  domainName: "natal-ia.com",
   email: {
     supportEmail: "escuelitamaker@gmail.com",
     noReplyEmail: "no-reply@escuelitamaker.com",

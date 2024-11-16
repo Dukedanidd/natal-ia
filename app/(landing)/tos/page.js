@@ -51,39 +51,45 @@ const TOS = () => {
           className="leading-relaxed whitespace-pre-wrap"
           style={{ fontFamily: "sans-serif" }}
         >
-          {`Last Updated: January 15, 2024
+          {`1. Aceptación de los Términos
 
-Welcome to Escuelita Starter!
+Al acceder y utilizar nuestra aplicación, aceptas cumplir con estos Términos y Condiciones. Si no estás de acuerdo con alguna de las disposiciones, no utilices nuestros servicios.
 
-These Terms of Service ("Terms") govern your use of the Escuelita Starter website at escuelitamaker.com ("Website") and the services provided by Escuelita Starter. By using our Website and services, you agree to these Terms.
+2. Objetivo de la Aplicación
 
-1. Description of Escuelita Starter
+Nuestra aplicación está diseñada para brindar acompañamiento emocional y primeros auxilios psicológicos en momentos de crisis, a través de sesiones de atención telefónica. El objetivo es proporcionar un espacio seguro donde los usuarios puedan expresar sus emociones, recibir apoyo y encontrar claridad en sus pensamientos, sin juicios y con empatía.
 
-Escuelita Starter is a template to help you start creating your own projects faster and more efficiently.
+3. Naturaleza del Servicio
 
-2. Ownership and Usage Rights
+El servicio proporcionado por nuestra aplicación no sustituye un tratamiento médico o psicológico profesional. En casos de emergencias de salud mental graves, recomendamos que contactes con un profesional certificado o acudas a servicios de emergencia.
+El acompañante emocional está capacitado para escuchar activamente, validar tus emociones y ofrecer apoyo durante la conversación. Sin embargo, no se proporcionan diagnósticos médicos ni soluciones definitivas.
+4. Autonomía del Usuario
 
-When you purchase a package from Escuelita Starter, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
+Nuestra aplicación promueve la autonomía del usuario. Durante las sesiones, se guiará al usuario a través de su propio proceso emocional, respetando sus tiempos y decisiones.
+Las respuestas del acompañante serán claras, cálidas y cercanas, y nunca se impondrán soluciones. El usuario es libre de decidir el curso de la conversación.
+5. Privacidad y Confidencialidad
 
-3. User Data and Privacy
+La información compartida durante las sesiones será tratada con la más estricta confidencialidad. No se almacenarán detalles personales o conversaciones más allá de lo necesario para la mejora del servicio.
+A pesar de nuestro compromiso con la privacidad, no podemos garantizar una confidencialidad absoluta en situaciones de emergencia donde pueda ser necesario contactar con servicios médicos o autoridades pertinentes.
+6. Uso Responsable del Servicio
 
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at escuelitamaker.com/privacy-policy.
+Te comprometes a utilizar la aplicación de manera responsable y ética, respetando la naturaleza del servicio y las intenciones del acompañante emocional.
+No se permitirá el uso del servicio para comportamientos abusivos, amenazas, acoso o cualquier tipo de maltrato hacia el acompañante o hacia otros usuarios.
+7. Limitación de Responsabilidad
 
-4. Non-Personal Data Collection
+El servicio de acompañamiento emocional está destinado a ser un apoyo temporal en momentos de crisis. No garantizamos una solución inmediata o permanente a los problemas de salud mental del usuario.
+En caso de necesidad de intervención profesional, el usuario será guiado a buscar atención en los recursos adecuados.
+8. ODS-3: Salud y Bienestar
 
-We use web cookies to collect non-personal data for the purpose of improving our services and user experience.
+Nuestra aplicación sigue los principios del Objetivo de Desarrollo Sostenible 3 (ODS-3) de la ONU, promoviendo la salud y el bienestar para todos los usuarios. Esto incluye el fomento de la salud mental y emocional, la creación de un entorno seguro para la expresión de sentimientos y la validación de las emociones del usuario. El enfoque se mantiene en la no discriminación, el acceso igualitario a la ayuda emocional y el respeto por las decisiones autónomas de cada persona.
 
-5. Governing Law
+9. Actualizaciones de los Términos
 
-These Terms are governed by the laws of Mexico.
+Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Las modificaciones entrarán en vigor tan pronto como se publiquen en la aplicación. Es responsabilidad del usuario revisar periódicamente estos términos.
 
-6. Updates to the Terms
+10. Contacto
 
-We may update these Terms from time to time. Users will be notified of any changes via email.
-
-For any questions or concerns regarding these Terms of Service, please contact us at ${config.email.supportEmail}.
-
-Thank you for using Escuelita Starter!`}
+Si tienes preguntas o inquietudes acerca de estos Términos y Condiciones, puedes ponerte en contacto con nosotros a través de jd.daniel.contact@gmail.com.`}
         </pre>
       </div>
     </main>

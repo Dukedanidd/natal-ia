@@ -22,9 +22,9 @@ export default function AsistenteEmocional() {
   ]
 
   const numerosEmergencia = [
-    { nombre: 'Línea de Ayuda Nacional', numero: '123-456-7890' },
-    { nombre: 'Centro de Crisis', numero: '098-765-4321' },
-    { nombre: 'Apoyo Psicológico', numero: '111-222-3333' },
+    { nombre: 'Línea Nacional contra el suicidio', numero: '800 911 2000' },
+    { nombre: 'Línea Nacional de Salud Mental', numero: '800 911 2000' },
+    { nombre: 'Centro de Atención a Víctimas de Violencia', numero: '800 822 6600' },
   ]
 
   return (
