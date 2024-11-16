@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import User from '../../models/User'; // Importar el modelo User
+import connectMongo from '../../libs/mongoose'; // Asegúrate de importar la función de conexión
 
 // Configuraciones básicas para esta ruta
 export const maxDuration = 60; // Tiempo máximo de espera
@@ -9,6 +11,8 @@ const BLAND_API_KEY = process.env.BLAND_API_KEY;
 const BLAND_API_URL = "https://api.bland.ai/v1/calls";
 
 export async function POST(req) {
+    await connectMongo(); // Conectar a MongoDB antes de manejar la solicitud
+
     if (!BLAND_API_KEY) {
         console.error("Error: BLAND_API_KEY no está configurada");
         return NextResponse.json(
@@ -39,7 +43,7 @@ export async function POST(req) {
 
         const blandData = {
             phone_number: formattedPhone,
-            first_sentence: `Hola ${data.name}, veo que te sientes ${data.emotional_state}, estoy aqui para escucharte, como te puedo ayudar?`,
+            first_sentence: `Hola ${data.name}, veo que te sientes ${data.emotional_state}, estoy aquí para escucharte, ¿cómo te puedo ayudar?`,
             task: `
         "Eres un asistente especializado en apoyo emocional y primeros auxilios psicológicos, con entrenamiento en intervención en crisis. Tu función es:
 ENFOQUE PRINCIPAL:
@@ -144,6 +148,30 @@ Identificar sus propios recursos y fortalezas"
             throw new Error(result.message || "Error en la API de Bland");
         }
 
+        // Guardar el historial de llamadas en la base de datos
+        const user = await User.findOne({ phone_number: formattedPhone });
+        if (user) {
+            const newCall = {
+                date: new Date(),
+                emotionalState: data.emotional_state,
+                messages: [
+                    {
+                        sender: "user",
+                        text: `Me siento ${data.emotional_state}`,
+                        timestamp: new Date(),
+                    },
+                    {
+                        sender: "assistant",
+                        text: blandData.first_sentence,
+                        timestamp: new Date(),
+                    },
+                ],
+            };
+
+            user.callHistory.push(newCall);
+            await user.save(); // Guardar los cambios en la base de datos
+        }
+
         return NextResponse.json({
             success: true,
             callId: result.call_id,
@@ -165,6 +193,6 @@ Identificar sus propios recursos y fortalezas"
         return NextResponse.json(
             { error: error.message || "Error al procesar la solicitud" },
             { status: 500 }
-        );
-    }
+        );
+    }
 }

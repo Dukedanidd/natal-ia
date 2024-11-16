@@ -46,6 +46,36 @@ const userSchema = mongoose.Schema(
       type: Date,
       default: null,
     },
+    // Nuevo campo para almacenar el historial de llamadas
+    callHistory: [
+      {
+        date: {
+          type: Date,
+          default: Date.now,
+        },
+        emotionalState: {
+          type: String,
+          enum: ["frustrado", "triste", "estresado", "burnout"], // Asegúrate de que coincida con los estados emocionales
+        },
+        messages: [
+          {
+            sender: {
+              type: String,
+              enum: ["user", "assistant"], // Define quién envió el mensaje
+              required: true,
+            },
+            text: {
+              type: String,
+              required: true,
+            },
+            timestamp: {
+              type: Date,
+              default: Date.now,
+            },
+          },
+        ],
+      },
+    ],
   },
   {
     timestamps: true,
