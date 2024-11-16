@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
-import User from '../../models/User'; // Importar el modelo User
-import connectMongo from '../../libs/mongoose'; // Asegúrate de importar la función de conexión
-
+import User from '../../../models/User';
+import connectMongo from '../../../libs/mongoose';
 // Configuraciones básicas para esta ruta
 export const maxDuration = 60; // Tiempo máximo de espera
 export const dynamic = "force-dynamic";
