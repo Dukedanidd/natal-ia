@@ -30,7 +30,10 @@ export default function AsistenteEmocional() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300 p-4">
       <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-xl w-full max-w-md mb-8">
-        <h1 className="text-3xl font-bold text-center mb-8 text-blue-600">Asistente Emocional</h1>
+        <h1 className="text-3xl font-bold text-center mb-8 text-blue-600">Natal-ia</h1>
+        <p className="text-center text-gray-600 mb-8">
+          Tu asistente emocional virtual, aquí para escucharte y apoyarte en momentos difíciles.
+        </p>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="nombre" className="block text-lg font-medium text-gray-700 mb-2">Nombre</label>
