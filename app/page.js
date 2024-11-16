@@ -24,7 +24,7 @@ export default function AsistenteEmocional() {
   const numerosEmergencia = [
     { nombre: 'Línea de Ayuda Nacional', numero: '123-456-7890' },
     { nombre: 'Centro de Crisis', numero: '098-765-4321' },
-    { nombre: 'Apoyo Psicológico test', numero: '111-222-3333' },
+    { nombre: 'Apoyo Psicológico', numero: '111-222-3333' },
   ]
 
   return (
