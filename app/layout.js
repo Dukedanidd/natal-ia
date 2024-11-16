@@ -2,8 +2,10 @@ import localFont from "next/font/local";
 import Footer from "@/components/common/Footer";
 import "./globals.css";
 import connectDB from "@/libs/mongoose";
+import Hero from "@/components/landing/Hero";
 import config from "@/config";
 import { NextAuthProvider } from "@/components/NextAuthProvider";
+import FAQ from "@/components/landing/FAQ";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,7 +37,9 @@ export default async function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextAuthProvider>
+          <Hero />
           {children}
+          <FAQ />
           <Footer />
         </NextAuthProvider>
       </body>

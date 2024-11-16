@@ -1,32 +1,40 @@
-import config from "@/config";
+import React from 'react'
+import { Heart, Shield, Phone } from 'lucide-react'
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <div className="relative overflow-hidden bg-base-200 w-full">
-      <div className="relative pb-16 pt-6 sm:pb-24">
-        <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-base-content sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">{config.appName}</span>{" "}
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-purple-100 via-purple-200 to-blue-300 p-4">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col items-center space-y-12 text-center">
+          <div className="space-y-6">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-black">
+              AI-UDA
             </h1>
-            <p className="mx-auto mt-3 max-w-md text-base text-base-content/70 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-              {config.appDescription}
+            <p className="mx-auto max-w-[700px] text-xl text-purple-900 dark:text-purple-600 md:text-2xl">
+              Tu compañero virtual está aquí para escucharte, apoyarte y acompañarte en cualquier momento.
             </p>
-            <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
-              <div className="rounded-md shadow">
-                <a
-                  href={config.auth.loginUrl}
-                  className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary px-8 py-3 text-base font-medium text-white hover:bg-primary-focus md:px-10 md:py-4 md:text-lg"
-                >
-                  Get Started
-                </a>
-              </div>
+          </div>
+          <button
+            className="inline-flex h-14 items-center justify-center rounded-full bg-purple-400 px-10 text-lg font-medium text-white transition-colors hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2"
+          >
+            Llamada
+          </button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg text-purple-600">
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Phone className="h-8 w-8" />
+              <span>Llamadas 24/7</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Heart className="h-8 w-8" />
+              <span>Apoyo Emocional</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Shield className="h-8 w-8" />
+              <span>100% Confidencial</span>
             </div>
           </div>
-        </main>
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Hero;
+    </section>
+  )
+}
