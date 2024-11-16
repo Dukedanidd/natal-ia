@@ -10,7 +10,7 @@ export default function AsistenteEmocional() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    
+
     try {
       const response = await fetch('/api/bland', {
         method: 'POST',
@@ -25,7 +25,7 @@ export default function AsistenteEmocional() {
       })
 
       const data = await response.json()
-      
+
       if (data.success) {
         alert('¡Llamada iniciada! Recibirás una llamada en breve.')
       } else {
@@ -45,7 +45,7 @@ export default function AsistenteEmocional() {
   ]
 
   return (
-    <section className="min-h-screen relative overflow-hidden bg-[#FDF8F3]">
+    <section id="asistente-emocional" className="min-h-screen relative overflow-hidden bg-[#FDF8F3]">
       {/* Patrón de fondo similar al Hero */}
       {/* <div className="absolute inset-0">
         <svg className="absolute w-full h-full opacity-[0.15]" viewBox="0 0 100 100" preserveAspectRatio="none">

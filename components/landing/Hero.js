@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Heart, Shield, Phone } from "lucide-react";
 
 export default function Hero() {
@@ -8,7 +9,7 @@ export default function Hero() {
         <svg className="absolute w-full h-full opacity-[0.15]" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0,0 C30,20 70,20 100,0 L100,100 L0,100 Z" fill="#E8B4A4" />
         </svg>
-        <div className="absolute inset-0" 
+        <div className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 20% 30%, #F9D5CA 1px, transparent 1px),
                              radial-gradient(circle at 80% 70%, #E8B4A4 1px, transparent 1px)`,
@@ -25,19 +26,19 @@ export default function Hero() {
               Estamos aquí para ti
             </span>
             <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-[#4A3B38]">
-              Tu Espacio de 
+              Tu Espacio de
               <span className="block mt-2 text-[#9A6B5D]">Escucha y Apoyo</span>
             </h1>
             <p className="mx-auto max-w-[700px] text-lg text-[#6B5550] md:text-xl leading-relaxed">
-              En momentos de dificultad, mereces un espacio seguro donde tus pensamientos 
+              En momentos de dificultad, mereces un espacio seguro donde tus pensamientos
               y emociones sean escuchados. Te acompañamos en tu camino hacia el bienestar.
             </p>
           </div>
 
-          <button className="group relative overflow-hidden inline-flex h-14 items-center justify-center rounded-full bg-[#9A6B5D] px-12 text-lg font-medium text-white transition-all duration-300 hover:bg-[#7D574B] focus:outline-none focus:ring-2 focus:ring-[#9A6B5D] focus:ring-offset-2">
+          <Link href="#asistente-emocional" className="group relative overflow-hidden inline-flex h-14 items-center justify-center rounded-full bg-[#9A6B5D] px-12 text-lg font-medium text-white transition-all duration-300 hover:bg-[#7D574B] focus:outline-none focus:ring-2 focus:ring-[#9A6B5D] focus:ring-offset-2">
             <span className="relative z-10">Comienza tu Camino</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#E8B4A4]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
+          </Link>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg mb-16">
             {[
