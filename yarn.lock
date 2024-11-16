@@ -1591,6 +1591,7 @@ __metadata:
     daisyui: "npm:^4.12.14"
     eslint: "npm:^8"
     eslint-config-next: "npm:15.0.3"
+    framer-motion: "npm:^11.11.17"
     lucide-react: "npm:^0.460.0"
     mongodb: "npm:^6.10.0"
     mongoose: "npm:^8.8.1"
@@ -2029,6 +2030,26 @@ __metadata:
     combined-stream: "npm:^1.0.8"
     mime-types: "npm:^2.1.12"
   checksum: 10c0/bb102d570be8592c23f4ea72d7df9daa50c7792eb0cf1c5d7e506c1706e7426a4e4ae48a35b109e91c85f1c0ec63774a21ae252b66f4eb981cb8efef7d0463c8
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:^11.11.17":
+  version: 11.11.17
+  resolution: "framer-motion@npm:11.11.17"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/4ec88a568e636c5409a238668770a7d0237270b4b58fdf27d0cab1f9094a4fdd22d25d827a1bba51e52f01e9d2db65544b32a5feb8eff9a63c8798f2e64677d0
   languageName: node
   linkType: hard
 

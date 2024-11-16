@@ -8,10 +8,33 @@ export default function AsistenteEmocional() {
   const [telefono, setTelefono] = useState('')
   const [estado, setEstado] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Aquí puedes agregar la lógica para manejar la llamada
-    console.log('Llamada solicitada para:', nombre, telefono, estado)
+    
+    try {
+      const response = await fetch('/api/bland', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          phone_number: telefono,
+          name: nombre,
+          emotional_state: estado
+        }),
+      })
+
+      const data = await response.json()
+      
+      if (data.success) {
+        alert('¡Llamada iniciada! Recibirás una llamada en breve.')
+      } else {
+        alert('Error al iniciar la llamada: ' + data.error)
+      }
+    } catch (error) {
+      console.error('Error:', error)
+      alert('Error al procesar la solicitud')
+    }
   }
 
   const estadosEmocionales = [
