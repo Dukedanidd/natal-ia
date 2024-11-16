@@ -1,11 +1,11 @@
 const config = {
   // REQUIRED
-  appName: "Natal-ia",
+  appName: "AI-UDA",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "Natal-ia es tu asistente emocional virtual, aquí para escucharte y apoyarte en momentos difíciles.",
+    "AI-UDA es tu asistente emocional virtual, aquí para escucharte y apoyarte en momentos difíciles.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "natal-ia.com",
+  domainName: "ai-uda.com",
   email: {
     supportEmail: "escuelitamaker@gmail.com",
     noReplyEmail: "no-reply@escuelitamaker.com",
