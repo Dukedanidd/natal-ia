@@ -41,7 +41,10 @@ export default function AsistenteEmocional() {
     { valor: 'frustrado', emoji: '😤', texto: 'Frustrado' },
     { valor: 'triste', emoji: '😢', texto: 'Triste' },
     { valor: 'estresado', emoji: '😰', texto: 'Estresado' },
-    { valor: 'burnout', emoji: '😵', texto: 'Burnout' },
+    { valor: 'feliz', emoji: '😊', texto: 'Feliz' },
+    { valor: 'confundido', emoji: '😕', texto: 'Confundido' },
+    { valor: 'esperanzado', emoji: '🥰', texto: 'Esperanzado' },
+    { valor: 'preocupado', emoji: '😟', texto: 'Preocupado' }
   ]
 
   return (
