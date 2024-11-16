@@ -1,5 +1,5 @@
-import React from 'react'
-import { Heart, Shield, Phone } from 'lucide-react'
+import React from "react";
+import { Heart, Shield, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -28,6 +28,7 @@ export default function Hero() {
               Tu Espacio de 
               <span className="block mt-2 text-[#9A6B5D]">Escucha y Apoyo</span>
             </h1>
+<<<<<<< HEAD
             <p className="mx-auto max-w-[700px] text-lg text-[#6B5550] md:text-xl leading-relaxed">
               En momentos de dificultad, mereces un espacio seguro donde tus pensamientos 
               y emociones sean escuchados. Te acompañamos en tu camino hacia el bienestar.
@@ -65,9 +66,29 @@ export default function Hero() {
                 <p className="text-sm text-[#6B5550]">{item.desc}</p>
               </div>
             ))}
+=======
+            <p className="mx-auto max-w-[700px] text-xl text-purple-900 dark:text-purple-600 md:text-2xl">
+              Tu compañero virtual está aquí para escucharte, apoyarte y
+              acompañarte en cualquier momento.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg text-purple-600">
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Phone className="h-8 w-8" />
+              <span>Llamadas 24/7</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Heart className="h-8 w-8" />
+              <span>Apoyo Emocional</span>
+            </div>
+            <div className="flex flex-col items-center space-y-2 p-6 bg-white/20 backdrop-blur-sm rounded-lg shadow-md">
+              <Shield className="h-8 w-8" />
+              <span>Sin Juicios</span>
+            </div>
+>>>>>>> 4869a648334c5c41319f3e31f76a3c20c266ba8a
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
