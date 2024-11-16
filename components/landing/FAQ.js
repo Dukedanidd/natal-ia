@@ -8,26 +8,45 @@ import { useRef, useState } from "react";
 const faqList = [
   {
     question: "¿Qué es esta app?",
-    answer: <div className="space-y-2 leading-relaxed">Es una aplicación diseñada para brindar apoyo emocional a personas que se sienten solas o necesitan a alguien con quien hablar. Utiliza inteligencia artificial para ofrecerte una experiencia personalizada a través de llamadas que te escuchan y te dan consejos.</div>,
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Es una aplicación diseñada para brindar apoyo emocional a personas que
+        se sienten abrumadas o necesitan a alguien con quien hablar. Utiliza
+        inteligencia artificial para ofrecerte una experiencia personalizada a
+        través de llamadas que te escuchan y te da acompañamiento.
+      </div>
+    ),
   },
   {
     question: "¿Qué temas puedo tratar con la IA?",
     answer: (
       <p>
-        Puedes hablar sobre cualquier cosa que te preocupe: tus emociones, problemas personales, estrés o incluso simplemente tener una conversación amistosa. La IA está diseñada para adaptarse a tus necesidades.
+        Puedes hablar sobre cualquier cosa que te preocupe: tus emociones,
+        problemas personales, estrés o incluso simplemente tener una
+        conversación amistosa. La IA está diseñada para adaptarse a tus
+        necesidades.
       </p>
     ),
   },
   {
     question: "¿La IA reemplaza a un terapeuta?",
     answer: (
-      <div className="space-y-2 leading-relaxed">No, nuestra app no pretende sustituir a un profesional de la salud mental. Es una herramienta de apoyo emocional que puede complementar otras formas de ayuda. Si necesitas atención médica o psicológica, te recomendamos contactar a un especialista.</div>
+      <div className="space-y-2 leading-relaxed">
+        No, nuestra app no pretende sustituir a un profesional de la salud
+        mental. Es una herramienta de apoyo emocional que puede complementar
+        otras formas de ayuda. Si necesitas atención médica o psicológica, te
+        recomendamos contactar a un especialista.
+      </div>
     ),
   },
   {
     question: "¿Cómo funciona la llamada por IA?",
     answer: (
-      <div className="space-y-2 leading-relaxed">La IA está entrenada para escucharte atentamente, identificar tus emociones y responder con empatía y orientación. Puedes hablar sobre lo que te preocupa, y la IA estará ahí para apoyarte sin juzgarte.</div>
+      <div className="space-y-2 leading-relaxed">
+        La IA está entrenada para escucharte atentamente, solamente pon tus
+        datos y la IA te llama, esta te acompañara en y buscara guiarte atravez
+        de tu sentir.
+      </div>
     ),
   },
 ];
