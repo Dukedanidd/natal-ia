@@ -1,18 +1,16 @@
-import { OpenAIApi, Configuration } from "openai";
+import OpenAI from "openai";
 import { NextResponse, NextRequest } from "next/server";
 
-const configuration = new Configuration({
+const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
-
-const openai = new OpenAIApi(configuration);
 
 export async function POST(req) {
     const body = await req.json();
     const userMessage = body.message;
 
     try {
-        const completion = await openai.createChatCompletion({
+        const completion = await openai.chat.completions.create({
             model: 'gpt-4',
             messages: [
                 {
@@ -88,7 +86,7 @@ Identificar sus propios recursos y fortaleza`
         });
 
         return NextResponse.json({
-            message: completion.data.choices[0].message.content
+            message: completion.choices[0].message.content
         });
     } catch (error) {
         console.error('Error in chat API:', error);
