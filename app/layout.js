@@ -6,6 +6,7 @@ import Hero from "@/components/landing/Hero";
 import config from "@/config";
 import { NextAuthProvider } from "@/components/NextAuthProvider";
 import FAQ from "@/components/landing/FAQ";
+import Chat from "./(landing)/chat/page";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,6 +39,7 @@ export default async function RootLayout({ children }) {
       >
         <NextAuthProvider>
           <Hero />
+          <Chat />
           {children}
           <FAQ />
           <Footer />
