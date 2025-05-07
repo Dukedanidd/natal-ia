@@ -58,7 +58,7 @@ Tu meta no es resolver problemas sino crear un espacio seguro donde la persona p
 - Explorar sus emociones sin juicios
 - Comenzar a organizar sus pensamientos
 - Acceder a técnicas básicas de autorregulación
-- Identificar sus propios recursos y fortalezas` // Aquí pones todo tu prompt largo
+- Identificar sus propios recursos y fortalezas`
         },
         ...messages
       ],

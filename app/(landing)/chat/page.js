@@ -31,18 +31,18 @@ export default function ChatPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-green-50 flex items-center justify-center px-4 py-8">
-      <div className="bg-white rounded-2xl shadow-xl w-full max-w-xl flex flex-col h-[80vh] border border-blue-200 overflow-hidden">
-        <div className="bg-gradient-to-r from-blue-400 to-green-400 text-white px-6 py-4 font-semibold text-lg">
+    <div className="min-h-screen bg-[#86adad] flex items-center justify-center px-4 py-8">
+      <div className="bg-white rounded-3xl shadow-xl w-full max-w-xl flex flex-col h-[80vh] overflow-hidden">
+        <div className="bg-[#86adad] text-white px-6 py-4 font-semibold text-lg tracking-wide">
           Apoyo emocional 💬
         </div>
         <div className="flex-1 overflow-y-auto p-4 space-y-4">
           {messages.map((msg, idx) => (
             <div key={idx} className={`text-sm whitespace-pre-wrap ${msg.role === 'user' ? 'text-right' : 'text-left'}`}>
-              <div className={`inline-block px-4 py-2 rounded-xl max-w-[75%] ${
+              <div className={`inline-block px-4 py-2 rounded-2xl max-w-[75%] ${
                 msg.role === 'user'
-                  ? 'bg-blue-100 text-blue-900'
-                  : 'bg-green-100 text-green-900'
+                  ? 'bg-[#86adad] text-white'
+                  : 'bg-gray-100 text-gray-800'
               }`}>
                 {msg.content}
               </div>
@@ -50,26 +50,35 @@ export default function ChatPage() {
           ))}
           {loading && (
             <div className="text-left">
-              <div className="inline-block px-4 py-2 rounded-xl bg-green-100 text-green-900 text-sm animate-pulse">
-                Escribiendo...
+              <div className="inline-block px-4 py-2 rounded-2xl bg-gray-100 text-gray-800 text-sm">
+                <div className="flex gap-1">
+                  <div className="w-2 h-2 bg-[#86adad] rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+                  <div className="w-2 h-2 bg-[#86adad] rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+                  <div className="w-2 h-2 bg-[#86adad] rounded-full animate-bounce"></div>
+                </div>
               </div>
             </div>
           )}
         </div>
-        <form onSubmit={handleSubmit} className="flex border-t border-blue-200">
-          <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="flex-1 p-3 text-sm focus:outline-none"
-            placeholder="Escribe lo que sientes..."
-          />
-          <button
-            type="submit"
-            disabled={loading}
-            className="bg-blue-500 text-white px-5 py-2 hover:bg-blue-600 transition disabled:opacity-50"
-          >
-            Enviar
-          </button>
+        <form onSubmit={handleSubmit} className="border-t border-gray-100 bg-white">
+          <div className="flex p-2">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              className="flex-1 p-3 text-sm text-gray-800 bg-transparent placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#86adad]/30 rounded-xl"
+              placeholder="Escribe lo que sientes..."
+            />
+            <button
+              type="submit"
+              disabled={loading || !input.trim()}
+              className="bg-[#86adad] text-white px-5 py-2 rounded-xl hover:opacity-90 transition disabled:opacity-50 ml-2 flex items-center gap-2"
+            >
+              Enviar
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </div>

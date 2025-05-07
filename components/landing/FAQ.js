@@ -55,8 +55,8 @@ const Item = ({ item }) => {
   return (
     <li>
       <button
-        className={`relative flex gap-2 items-center w-full py-5 text-base font-medium text-left border-t md:text-lg border-primary/20 text-gray-700 transition-colors duration-200 hover:text-primary ${
-          isOpen ? "text-primary" : ""
+        className={`relative flex gap-2 items-center w-full py-5 text-base font-medium text-left border-t md:text-lg border-[#86adad]/20 text-gray-700 transition-colors duration-200 hover:text-[#86adad] ${
+          isOpen ? "text-[#86adad]" : ""
         }`}
         onClick={(e) => {
           e.preventDefault();
@@ -112,21 +112,21 @@ const Item = ({ item }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-primary/70" id="faq">
+    <section className="bg-[#86adad]" id="faq">
       <div className="py-24 px-8 max-w-3xl mx-auto flex flex-col gap-12">
         <div className="flex flex-col text-center">
-          <span className="inline-block px-4 py-1.5 bg-white/20 text-on-primary rounded-full text-sm font-medium mb-4 mx-auto">
+          <span className="inline-block px-4 py-1.5 bg-white/20 text-white rounded-full text-sm font-medium mb-4 mx-auto">
             Preguntas Frecuentes
           </span>
-          <h2 className="text-4xl font-bold text-on-primary mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             ¿Cómo podemos ayudarte?
           </h2>
-          <p className="text-on-primary/90 max-w-2xl mx-auto">
+          <p className="text-white/90 max-w-2xl mx-auto">
             Encuentra respuestas a las preguntas más comunes sobre nuestro servicio de apoyo emocional
           </p>
         </div>
 
-        <ul className="w-full bg-white rounded-3xl shadow-sm p-8 border border-primary/20">
+        <ul className="w-full bg-white rounded-3xl shadow-sm p-8 border border-[#86adad]/20">
           {faqList.map((item, i) => (
             <Item key={i} item={item} />
           ))}

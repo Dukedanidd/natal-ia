@@ -54,7 +54,8 @@ export default function AsistenteEmocional() {
     <>
       <section
         id="asistente-emocional"
-        className="min-h-screen relative overflow-hidden bg-secondary/70"
+        className="min-h-screen relative overflow-hidden"
+        style={{ backgroundColor: "#86adad" }}
       >
         {/* Patrón de fondo similar al Hero */}
         {/* <div className="absolute inset-0">
