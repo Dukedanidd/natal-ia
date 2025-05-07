@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #1a9690;
+  --secondary: #cff7f8;
+  --text-on-primary: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,4 +21,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-on-primary {
+  color: var(--text-on-primary);
 }

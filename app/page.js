@@ -54,7 +54,7 @@ export default function AsistenteEmocional() {
     <>
       <section
         id="asistente-emocional"
-        className="min-h-screen relative overflow-hidden bg-[#FDF8F3]"
+        className="min-h-screen relative overflow-hidden bg-secondary/70"
       >
         {/* Patrón de fondo similar al Hero */}
         {/* <div className="absolute inset-0">
@@ -74,13 +74,13 @@ export default function AsistenteEmocional() {
         <div className="container mx-auto px-4 relative z-10 min-h-screen flex flex-col items-center justify-center">
           <div className="w-full max-w-md space-y-8">
             <div className="text-center space-y-4">
-              <span className="inline-block px-4 py-1.5 bg-[#E8B4A4]/20 text-[#9A6B5D] rounded-full text-sm font-medium">
+              <span className="inline-block px-4 py-1.5 bg-primary/20 text-primary/1000 rounded-full text-sm font-medium">
                 Sof-ia está aquí para ti
               </span>
-              <h1 className="text-3xl font-bold text-[#4A3B38]">
+              <h1 className="text-3xl font-bold text-foreground">
                 Tu Asistente Emocional
               </h1>
-              <p className="text-[#6B5550]">
+              <p className="text-foreground/80">
                 Un espacio seguro para compartir tus emociones y recibir el
                 apoyo que necesitas
               </p>
@@ -88,19 +88,19 @@ export default function AsistenteEmocional() {
 
             <form
               onSubmit={handleSubmit}
-              className="bg-white/70 backdrop-blur-sm rounded-3xl shadow-sm p-8 space-y-6 border border-[#E8B4A4]/20"
+              className="bg-white rounded-3xl shadow-sm p-8 space-y-6 border border-primary/20"
             >
               <div>
                 <label
                   htmlFor="nombre"
-                  className="block text-[#4A3B38] font-medium mb-2"
+                  className="block text-gray-700 font-medium mb-2"
                 >
                   Nombre
                 </label>
                 <input
                   id="nombre"
                   type="text"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E8B4A4]/30 bg-white/50 focus:border-[#9A6B5D] focus:ring focus:ring-[#E8B4A4]/20 text-[#4A3B38] transition-colors duration-200"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-primary focus:ring focus:ring-primary/20 text-gray-700 transition-colors duration-200"
                   value={nombre}
                   onChange={(e) => setNombre(e.target.value)}
                   required
@@ -110,14 +110,14 @@ export default function AsistenteEmocional() {
               <div>
                 <label
                   htmlFor="telefono"
-                  className="block text-[#4A3B38] font-medium mb-2"
+                  className="block text-gray-700 font-medium mb-2"
                 >
                   Teléfono
                 </label>
                 <input
                   id="telefono"
                   type="tel"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E8B4A4]/30 bg-white/50 focus:border-[#9A6B5D] focus:ring focus:ring-[#E8B4A4]/20 text-[#4A3B38] transition-colors duration-200"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-primary focus:ring focus:ring-primary/20 text-gray-700 transition-colors duration-200"
                   value={telefono}
                   onChange={(e) => setTelefono(e.target.value)}
                   required
@@ -127,13 +127,13 @@ export default function AsistenteEmocional() {
               <div>
                 <label
                   htmlFor="estado"
-                  className="block text-[#4A3B38] font-medium mb-2"
+                  className="block text-gray-700 font-medium mb-2"
                 >
                   ¿Cómo te sientes?
                 </label>
                 <select
                   id="estado"
-                  className="w-full px-4 py-3 rounded-xl border border-[#E8B4A4]/30 bg-white/50 focus:border-[#9A6B5D] focus:ring focus:ring-[#E8B4A4]/20 text-[#4A3B38] transition-colors duration-200"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white focus:border-primary focus:ring focus:ring-primary/20 text-gray-700 transition-colors duration-200"
                   value={estado}
                   onChange={(e) => setEstado(e.target.value)}
                   required
@@ -149,27 +149,27 @@ export default function AsistenteEmocional() {
 
               <button
                 type="submit"
-                className="w-full group relative overflow-hidden inline-flex h-14 items-center justify-center rounded-xl bg-[#9A6B5D] text-lg font-medium text-white transition-all duration-300 hover:bg-[#7D574B] focus:outline-none focus:ring-2 focus:ring-[#9A6B5D] focus:ring-offset-2"
+                className="w-full group relative overflow-hidden inline-flex h-14 items-center justify-center rounded-xl bg-primary text-lg font-medium text-white transition-all duration-300 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
                 <span className="relative z-10 flex items-center gap-2">
                   <Phone className="w-5 h-5" />
                   Solicitar Llamada
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#E8B4A4]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </button>
             </form>
 
             <div className="grid grid-cols-3 gap-4 text-center text-sm">
-              <div className="text-[#6B5550]">
-                <Heart className="w-5 h-5 mx-auto mb-1 text-[#9A6B5D]" />
+              <div className="text-gray-700">
+                <Heart className="w-5 h-5 mx-auto mb-1 text-primary" />
                 Apoyo Empático
               </div>
-              <div className="text-[#6B5550]">
-                <MessageCircle className="w-5 h-5 mx-auto mb-1 text-[#9A6B5D]" />
+              <div className="text-gray-700">
+                <MessageCircle className="w-5 h-5 mx-auto mb-1 text-primary" />
                 Escucha Activa
               </div>
-              <div className="text-[#6B5550]">
-                <Sparkles className="w-5 h-5 mx-auto mb-1 text-[#9A6B5D]" />
+              <div className="text-gray-700">
+                <Sparkles className="w-5 h-5 mx-auto mb-1 text-primary" />
                 Sin Juicios
               </div>
             </div>
